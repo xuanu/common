@@ -1,7 +1,6 @@
 package common.zeffect.cn.library.log;
 
-import com.orhanobut.logger.Logger;
-import com.orhanobut.logger.Printer;
+import android.util.Log;
 
 /**
  * 《强烈推荐使用该工具类》
@@ -12,84 +11,54 @@ import com.orhanobut.logger.Printer;
  * @author fanjiao
  */
 public class LogUtils {
-    /***
-     * 默认标记
-     */
-    public static final String DEFAULT_TAG = "logUtils";
 
-    /**
-     * 初始化（写在Application中）。
-     */
-    public static void init() {
-        Logger.init(DEFAULT_TAG);
+    private LogUtils() {
+        /* cannot be instantiated */
+        throw new UnsupportedOperationException("cannot be instantiated");
     }
 
-    /**
-     * 初始化并指定一个标示符（写在Application中）。
-     *
-     * @param tag 自定义的标示符号
-     */
-    public static void init(String tag) {
-        Logger.init(tag);
+    public static boolean isDebug = true;// 是否需要打印bug，可以在application的onCreate函数里面初始化
+    private static final String TAG = "zeffect";
+
+    // 下面四个是默认tag的函数
+    public static void i(String msg) {
+        if (isDebug)
+            Log.i(TAG, msg);
     }
 
-    public static void v(String message, Object... args) {
-        Logger.v(message, args);
+    public static void d(String msg) {
+        if (isDebug)
+            Log.d(TAG, msg);
     }
 
-    public static void d(Object args) {
-        Logger.d(args);
+    public static void e(String msg) {
+        if (isDebug)
+            Log.e(TAG, msg);
     }
 
-    public static void d(String message, Object... args) {
-        Logger.d(message, args);
+    public static void v(String msg) {
+        if (isDebug)
+            Log.v(TAG, msg);
     }
 
-    public static void e(String message, Object... args) {
-        Logger.e(message, args);
+    // 下面是传入自定义tag的函数
+    public static void i(String tag, String msg) {
+        if (isDebug)
+            Log.i(tag, msg);
     }
 
-    public static void e(Throwable throwable, String message, Object... args) {
-        Logger.e(throwable, message, args);
+    public static void d(String tag, String msg) {
+        if (isDebug)
+            Log.i(tag, msg);
     }
 
-    public static void i(String message, Object... args) {
-        Logger.i(message, args);
+    public static void e(String tag, String msg) {
+        if (isDebug)
+            Log.i(tag, msg);
     }
 
-    public static Printer t(int methodCount) {
-        return Logger.t(methodCount);
-    }
-
-    public static Printer t(String tag, int methodCount) {
-        return Logger.t(tag, methodCount);
-    }
-
-    public static Printer t(String tag) {
-        return Logger.t(tag);
-    }
-
-    public static void w(String message, Object... args) {
-        Logger.w(message, args);
-    }
-
-    public static void wtf(String message, Object... args) {
-        Logger.wtf(message, args);
-    }
-
-    public static void xml(String message) {
-        Logger.xml(message);
-    }
-
-    public static void json(String json) {
-        Logger.json(json);
-    }
-
-    public static void log(int priority, String tag, String message, Throwable throwable) {
-        Logger.log(priority, tag, message, throwable);
-    }
-
-    public static void resetSettings() {
-        Logger.resetSettings();
+    public static void v(String tag, String msg) {
+        if (isDebug)
+            Log.i(tag, msg);
     }
 }
