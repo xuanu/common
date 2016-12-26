@@ -29,4 +29,5 @@ dependencies {
     compile 'com.github.xuanu:logger:1.0.0'
     compile 'com.anthonycr.grant:permissions:1.0'
     testCompile 'junit:junit:4.12'
+    compile 'com.github.xuanu:okhttputils:1.0.2'
 }
