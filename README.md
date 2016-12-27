@@ -8,3 +8,4 @@
 - MD5加密： MD5Crypto
 - SD卡检测  StorageUtils
 - 三个OBSERVER:HomeKeyObserver,MyFileObserver,NetChangeObserver
+- 选择图片： ChoseImage
