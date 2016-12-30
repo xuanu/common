@@ -1167,7 +1167,7 @@ public class TimeUtils {
     }
 
     public static int getMonth() {
-        return Calendar.getInstance().get(Calendar.MONTH) + 1;
+        return Calendar.getInstance().get(Calendar.MONTH);
     }
 
     public static int getDay() {
