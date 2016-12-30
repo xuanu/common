@@ -1094,8 +1094,8 @@ public class TimeUtils {
         return CHINESE_ZODIAC[year % 12];
     }
 
-    private static final String[] ZODIAC       = {"水瓶座", "双鱼座", "白羊座", "金牛座", "双子座", "巨蟹座", "狮子座", "处女座", "天秤座", "天蝎座", "射手座", "魔羯座"};
-    private static final int[]    ZODIAC_FLAGS = {20, 19, 21, 21, 21, 22, 23, 23, 23, 24, 23, 22};
+    private static final String[] ZODIAC = {"水瓶座", "双鱼座", "白羊座", "金牛座", "双子座", "巨蟹座", "狮子座", "处女座", "天秤座", "天蝎座", "射手座", "魔羯座"};
+    private static final int[] ZODIAC_FLAGS = {20, 19, 21, 21, 21, 22, 23, 23, 23, 24, 23, 22};
 
     /**
      * 获取星座
@@ -1156,4 +1156,34 @@ public class TimeUtils {
                 ? month - 1
                 : (month + 10) % 12];
     }
+
+    /***
+     * 取当前年份
+     *
+     * @return 年份
+     */
+    public static int getYear() {
+        return Calendar.getInstance().get(Calendar.YEAR);
+    }
+
+    public static int getMonth() {
+        return Calendar.getInstance().get(Calendar.MONTH);
+    }
+
+    public static int getDay() {
+        return Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+    }
+
+    public static int getHour() {
+        return Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+    }
+
+    public static int getMinute() {
+        return Calendar.getInstance().get(Calendar.MINUTE);
+    }
+
+    public static int getSecond() {
+        return Calendar.getInstance().get(Calendar.SECOND);
+    }
+
 }
