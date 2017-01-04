@@ -10,3 +10,4 @@
 - 三个OBSERVER:HomeKeyObserver,MyFileObserver,NetChangeObserver
 - 选择图片： ChoseImage
 - BitmapUtils,TimeUtils, 常量类ConstUtils,单位转换ConvertUtils,关闭流CloseUtils,字符相关StringUtils copy自：https://github.com/Blankj/AndroidUtilCode
+- 带圈字符：IndexUtils
