@@ -62,7 +62,7 @@ public abstract class WeakAsyncTask<Params, Progress, Result, WeakTarget> extend
     }
 
 
-    protected abstract void onPostExecute(WeakTarget pTarget, Result pResult);
+    protected void onPostExecute(WeakTarget pTarget, Result pResult){};
 
     @Override
     protected final void onProgressUpdate(Progress... values) {
