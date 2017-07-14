@@ -11,3 +11,4 @@
 - 选择图片： ChoseImage
 - BitmapUtils,TimeUtils, 常量类ConstUtils,单位转换ConvertUtils,关闭流CloseUtils,字符相关StringUtils copy自：https://github.com/Blankj/AndroidUtilCode
 - 带圈字符：IndexUtils
+- 防止内存泄露的AsyncTask，参考：[ Android实现弱引用AsyncTask，将内存泄漏置之度外](http://blog.csdn.net/u013718120/article/details/53032986)修改，使用方法:`new WeakAsyncTask<Void, Void, Void, MainActivity>(this) {……}.execute();`
